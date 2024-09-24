@@ -51,7 +51,7 @@ public class ProductController {
     return produits.get(productId);
   }
 
-  @PostMapping("/produits/")
+  @PostMapping("/produits")
   public ResponseEntity<Void> createOne(@RequestBody Produit produit) {
     for (Produit prod:produits.values()) {
       if (prod.equals(produit)) {
