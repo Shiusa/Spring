@@ -13,6 +13,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 public class Produit {
 
+  @EqualsAndHashCode.Exclude
   private int id;
   @EqualsAndHashCode.Include
   private String name;
