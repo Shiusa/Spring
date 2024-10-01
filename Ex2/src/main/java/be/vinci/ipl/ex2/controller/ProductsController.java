@@ -76,15 +76,29 @@ public class ProductsController {
     return new ResponseEntity<>(HttpStatus.CREATED);
   }
 
-  @PutMapping("produits/{prductId}")
-  public ResponseEntity<Void> updateOne(@PathVariable int prductId, @RequestBody Product product) {
-    if (!products.containsKey(prductId) || products.get(prductId)==null) {
+  @PutMapping("produits/{productId}")
+  public ResponseEntity<Void> updateOne(@PathVariable int productId, @RequestBody Product product) {
+    if (product.getId() != 0) {
+      if (productId != product.getId()) {
+        throw new ResponseStatusException(HttpStatus.CONFLICT);
+      }
+      if (service.findById(String.valueOf(productId)) == null) {
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+      }
+    } else {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
     }
+    /*if (!products.containsKey(productId) || products.get(productId)==null) {
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+    }*/
     if (product.getPrice()<0f || product.getName().isBlank() || product.getCategory().isBlank()) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
     }
-    products.put(prductId, product);
+    //products.put(prductId, product);
+    boolean updated = service.updateOne(product);
+    if (!updated) {
+      throw new ResponseStatusException(HttpStatus.CONFLICT);
+    }
     return new ResponseEntity<>(HttpStatus.OK);
   }
 

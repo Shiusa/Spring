@@ -1,5 +1,5 @@
 ### ReadAll
-GET http://localhost:8080/produits/3
+GET http://localhost:8080/produits
 
 ### CreateOne
 POST http://localhost:8080/produits

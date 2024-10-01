@@ -32,4 +32,12 @@ public class ProductsService {
     return repository.findById(id).orElse(null);
   }
 
+  public boolean updateOne(Product product) {
+    if (repository.existsById(String.valueOf(product.getId()))) {
+      repository.save(product);
+      return true;
+    }
+    return false;
+  }
+
 }
