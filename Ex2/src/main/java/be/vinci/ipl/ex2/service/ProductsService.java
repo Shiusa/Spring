@@ -2,11 +2,13 @@ package be.vinci.ipl.ex2.service;
 
 import be.vinci.ipl.ex2.data.ProductsRepository;
 import be.vinci.ipl.ex2.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ProductsService {
 
+  @Autowired
   private final ProductsRepository repository;
 
   public ProductsService(ProductsRepository repository) {
