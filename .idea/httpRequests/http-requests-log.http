@@ -1,5 +1,58 @@
 GET http://localhost:8080/produits
 
+<> 2024-10-01T171046.200.json
+
+###
+
+DELETE http://localhost:8080/produits/4
+Content-Type: application/json
+
+<> 2024-10-01T171030.400.json
+
+###
+
+GET http://localhost:8080/produits
+
+<> 2024-10-01T171026.200.json
+
+###
+
+DELETE http://localhost:8080/produits/4
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/produits
+
+<> 2024-10-01T171003.200.json
+
+###
+
+POST http://localhost:8080/produits
+Content-Type: application/json
+
+{
+  "name": "Produit4",
+  "category": "Categorie2",
+  "price": 30.0
+}
+
+###
+
+GET http://localhost:8080/produits
+
+<> 2024-10-01T170954.200.json
+
+###
+
+GET http://localhost:8080/produits
+
+<> 2024-10-01T170952.200.json
+
+###
+
+GET http://localhost:8080/produits
+
 <> 2024-10-01T170611.200.json
 
 ###
@@ -348,73 +401,6 @@ Content-Type: application/json
 }
 
 <> 2024-09-25T003609.400.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-09-25T003606.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "id": 4,
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-09-25T003559.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "id": 4,
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-<> 2024-09-25T003526.400.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-09-25T003523.200.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-09-25T003425.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-09-25T003418.200.json
 
 ###
 

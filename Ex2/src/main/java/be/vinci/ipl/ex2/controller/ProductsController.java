@@ -111,10 +111,14 @@ public class ProductsController {
 
   @DeleteMapping("produits/{productId}")
   public ResponseEntity<Void> deleteOne(@PathVariable int productId) {
-    if (!products.containsKey(productId)) {
+    if (service.findById(String.valueOf(productId)) == null) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
     }
-    products.remove(productId);
+    /*if (!products.containsKey(productId)) {
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+    }*/
+    //products.remove(productId);
+    service.deleteById(String.valueOf(productId));
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
