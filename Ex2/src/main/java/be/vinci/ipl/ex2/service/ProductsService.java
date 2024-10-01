@@ -40,4 +40,8 @@ public class ProductsService {
     return false;
   }
 
+  public void deleteAll() {
+    repository.deleteAll();
+  }
+
 }

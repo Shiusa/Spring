@@ -104,7 +104,8 @@ public class ProductsController {
 
   @DeleteMapping("produits")
   public ResponseEntity<Void> deleteAll() {
-    products.clear();
+    //products.clear();
+    service.deleteAll();
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
