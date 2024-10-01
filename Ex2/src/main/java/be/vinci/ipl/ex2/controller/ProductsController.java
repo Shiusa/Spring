@@ -54,8 +54,8 @@ public class ProductsController {
 
   @GetMapping("/produits/{productId}")
   public Product readOne(@PathVariable int productId) {
-
-    return products.get(productId);
+    //return products.get(productId);
+    return service.findById(String.valueOf(productId));
   }
 
   @PostMapping("/produits")

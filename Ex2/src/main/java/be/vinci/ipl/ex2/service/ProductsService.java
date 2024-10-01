@@ -28,4 +28,8 @@ public class ProductsService {
     return repository.findAll();
   }
 
+  public Product findById(String id) {
+    return repository.findById(id).orElse(null);
+  }
+
 }
