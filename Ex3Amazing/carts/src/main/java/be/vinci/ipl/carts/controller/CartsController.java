@@ -1,6 +1,7 @@
 package be.vinci.ipl.carts.controller;
 
 import be.vinci.ipl.carts.dto.ProductDTO;
+import be.vinci.ipl.carts.model.CartItem;
 import be.vinci.ipl.carts.service.CartsService;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +23,11 @@ public class CartsController {
   }
 
   @PostMapping("/carts/users/{pseudo}/products/{productId}")
-  public ResponseEntity<Void> addProduct(@PathVariable String pseudo, @PathVariable int productId) {
+  public ResponseEntity<Void> addProduct(@PathVariable String pseudo, @PathVariable int productId, CartItem cartItem) {
     if (!service.userExisting(pseudo) || !service.productExisting(productId)) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-    boolean created = service.createCartItem(pseudo, productId);
+    boolean created = service.createCartItem(cartItem);
     if (!created) {
       return new ResponseEntity<>(HttpStatus.CONFLICT);
     }

@@ -52,14 +52,12 @@ public class CartsService {
     }
   }
 
-  public boolean createCartItem(String pseudo, int productId) {
-    if (repository.existsByProductIdAndPseudo(productId,pseudo)) {
+  public boolean createCartItem(CartItem cartItem) {
+    if (repository.existsByProductIdAndPseudo(cartItem.getProductId(), cartItem.getPseudo())) {
       return false;
     }
-    CartItem newItem = new CartItem();
-    newItem.setPseudo(pseudo);
-    newItem.setProductId(productId);
-    repository.save(newItem);
+
+    repository.save(cartItem);
     return true;
   }
 
