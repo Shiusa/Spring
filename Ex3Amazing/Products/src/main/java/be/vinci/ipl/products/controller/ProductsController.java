@@ -59,7 +59,7 @@ public class ProductsController {
     //return products.get(productId);
     Product productFound = service.findById(String.valueOf(productId));
     if (productFound != null) {
-      return new ResponseEntity<>(HttpStatus.OK);
+      return new ResponseEntity<>(productFound,HttpStatus.OK);
     } else {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
