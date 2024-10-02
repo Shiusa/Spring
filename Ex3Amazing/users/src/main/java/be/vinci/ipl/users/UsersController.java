@@ -1,4 +1,4 @@
-package be.vinci.ipl.catflix.users;
+package be.vinci.ipl.users;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

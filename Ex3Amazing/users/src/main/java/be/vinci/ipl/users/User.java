@@ -1,4 +1,4 @@
-package be.vinci.ipl.catflix.users;
+package be.vinci.ipl.users;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
