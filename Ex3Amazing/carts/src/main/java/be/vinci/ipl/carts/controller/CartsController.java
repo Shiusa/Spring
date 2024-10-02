@@ -1,6 +1,7 @@
 package be.vinci.ipl.carts.controller;
 
 import be.vinci.ipl.carts.dto.ProductDTO;
+import be.vinci.ipl.carts.service.CartsService;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -14,8 +15,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CartsController {
 
+  private final CartsService service;
+
+  public CartsController(CartsService service) {
+    this.service = service;
+  }
+
   @PostMapping("/carts/users/{pseudo}/products/{productId}")
   public ResponseEntity<Void> addProduct(@PathVariable String pseudo, @PathVariable int productId) {
+    if (!service.userExisting(pseudo) || !service.productExisting(productId)) {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    boolean created = service.createCartItem(pseudo, productId);
+    if (!created) {
+      return new ResponseEntity<>(HttpStatus.CONFLICT);
+    }
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
