@@ -92,4 +92,8 @@ public class CartsService {
     repository.deleteAllByPseudo(pseudo);
   }
 
+  public void removeCartProduct(int productId) {
+    repository.deleteAllByProductId(productId);
+  }
+
 }

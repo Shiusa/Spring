@@ -70,6 +70,10 @@ public class CartsController {
 
   @DeleteMapping("/carts/products/{productId}")
   public ResponseEntity<Void> deleteProductFromAllCart(@PathVariable int productId) {
+    if (!service.productExisting(productId)) {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    service.removeCartProduct(productId);
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
