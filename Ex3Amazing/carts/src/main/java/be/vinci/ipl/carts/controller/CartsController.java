@@ -3,8 +3,7 @@ package be.vinci.ipl.carts.controller;
 import be.vinci.ipl.carts.dto.ProductDTO;
 import be.vinci.ipl.carts.model.CartItem;
 import be.vinci.ipl.carts.service.CartsService;
-import java.util.ArrayList;
-import java.util.List;
+import feign.FeignException.FeignClientException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -45,8 +44,19 @@ public class CartsController {
   }
 
   @GetMapping("/carts/users/{pseudo}")
-  public Iterable<ProductDTO> getProducts(@PathVariable String pseudo) {
-    return new ArrayList<>();
+  public ResponseEntity<Iterable<ProductDTO>> getProducts(@PathVariable String pseudo) {
+    if (!service.userExisting(pseudo)) {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    try {
+      Iterable<ProductDTO> productDTOS = service.getProductByPseudo(pseudo);
+      return new ResponseEntity<>(productDTOS, HttpStatus.OK);
+    } catch (FeignClientException e) {
+      if (e.status() == 404) {
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+      }
+    }
+    return new ResponseEntity<>(HttpStatus.NOT_FOUND);
   }
 
   @DeleteMapping("/carts/users/{pseudo}")

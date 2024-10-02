@@ -13,4 +13,6 @@ public interface CartsItemRepository extends CrudRepository<CartItem, String> {
   @Transactional
   void deleteCartItemByProductIdAndPseudo(int productId, String pseudo);
 
+  Iterable<CartItem> findAllByPseudo(String pseudo);
+
 }

@@ -3,9 +3,12 @@ package be.vinci.ipl.carts.service;
 import be.vinci.ipl.carts.data.CartsItemRepository;
 import be.vinci.ipl.carts.data.ProductsProxy;
 import be.vinci.ipl.carts.data.UsersProxy;
+import be.vinci.ipl.carts.dto.ProductDTO;
 import be.vinci.ipl.carts.model.CartItem;
 import feign.FeignException;
 import feign.FeignException.FeignClientException;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +17,7 @@ public class CartsService {
 
   @Autowired
   private final UsersProxy usersProxy;
-  @Autowired
+
   private final ProductsProxy productsProxy;
   @Autowired
   private final CartsItemRepository repository;
@@ -67,6 +70,22 @@ public class CartsService {
 
   public void removeCartItem(String pseudo, int productId) {
     repository.deleteCartItemByProductIdAndPseudo(productId,pseudo);
+  }
+
+  public Iterable<ProductDTO> getProductByPseudo(String pseudo) {
+    Iterable<CartItem> cartItems = repository.findAllByPseudo(pseudo);
+    List<ProductDTO> productList = new ArrayList<>();
+    for (CartItem cartItem:cartItems) {
+      try {
+        ProductDTO product = productsProxy.getOne(cartItem.getProductId());
+        if (product != null) {
+          productList.add(product);
+        }
+      } catch (FeignClientException e) {
+        throw e;
+      }
+    }
+    return productList;
   }
 
 }
