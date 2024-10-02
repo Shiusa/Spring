@@ -55,9 +55,15 @@ public class ProductsController {
   }
 
   @GetMapping("/produits/{productId}")
-  public Product readOne(@PathVariable int productId) {
+  public ResponseEntity<Product> readOne(@PathVariable int productId) {
     //return products.get(productId);
-    return service.findById(String.valueOf(productId));
+    Product productFound = service.findById(String.valueOf(productId));
+    if (productFound != null) {
+      return new ResponseEntity<>(HttpStatus.OK);
+    } else {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    //return service.findById(String.valueOf(productId));
   }
 
   @PostMapping("/produits")
@@ -85,7 +91,7 @@ public class ProductsController {
         throw new ResponseStatusException(HttpStatus.CONFLICT);
       }
       if (service.findById(String.valueOf(productId)) == null) {
-        throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
       }
     } else {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
