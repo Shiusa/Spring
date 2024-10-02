@@ -1,8 +1,8 @@
 ### ReadAll
-GET http://localhost:9001/produits
+GET http://localhost:9001/products
 
 ### CreateOne
-POST http://localhost:9001/produits
+POST http://localhost:9001/products
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ### UpdateOne
-PUT http://localhost:9001/produits/4
+PUT http://localhost:9001/products/4
 Content-Type: application/json
 
 {
@@ -23,9 +23,9 @@ Content-Type: application/json
 }
 
 ### DeleteOne
-DELETE http://localhost:9001/produits/4
+DELETE http://localhost:9001/products/4
 Content-Type: application/json
 
 ### DeleteAll
-DELETE http://localhost:9001/produits
+DELETE http://localhost:9001/products
 Content-Type: application/json
