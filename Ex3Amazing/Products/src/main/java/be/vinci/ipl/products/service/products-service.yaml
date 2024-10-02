@@ -61,9 +61,11 @@ paths:
         409:
           description: Updating a product with different id
         400:
-          description: Update on non existing product or with a product with no id
+          description: Update on a product with no id or other missing field
         404:
-          description: No product found
+          description: Update on non existing product
+        200:
+          description: Product updated
     delete:
       summary: Delete one product based on id
       responses:
