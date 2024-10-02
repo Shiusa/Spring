@@ -1,3 +1,12 @@
+GET http://localhost:9001/produits
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-02T122650.200.json
+
+###
+
 GET http://localhost:8080/produits
 
 <> 2024-10-01T174158.200.json
@@ -439,12 +448,6 @@ Content-Type: application/json
   "category": "Categorie2",
   "price": 30.0
 }
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172636.200.json
 
 ###
 

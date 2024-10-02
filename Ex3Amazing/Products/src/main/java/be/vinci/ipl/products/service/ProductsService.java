@@ -1,0 +1,53 @@
+package be.vinci.ipl.products.service;
+
+import be.vinci.ipl.products.data.ProductsRepository;
+import be.vinci.ipl.products.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ProductsService {
+
+  @Autowired
+  private final ProductsRepository repository;
+
+  public ProductsService(ProductsRepository repository) {
+    this.repository = repository;
+  }
+
+  public boolean createOne(Product product) {
+    if (repository.existsByNameAndCategoryAndPrice(product.getName(), product.getCategory(),
+        product.getPrice())) {
+      return false;
+    }
+    int productId = repository.findTopByOrderByIdDesc().map(Product::getId).orElse(0)+1;
+    product.setId(productId);
+    repository.save(product);
+    return true;
+  }
+
+  public Iterable<Product> findAll() {
+    return repository.findAll();
+  }
+
+  public Product findById(String id) {
+    return repository.findById(id).orElse(null);
+  }
+
+  public boolean updateOne(Product product) {
+    if (repository.existsById(String.valueOf(product.getId()))) {
+      repository.save(product);
+      return true;
+    }
+    return false;
+  }
+
+  public void deleteAll() {
+    repository.deleteAll();
+  }
+
+  public void deleteById(String id) {
+    repository.deleteById(id);
+  }
+
+}
