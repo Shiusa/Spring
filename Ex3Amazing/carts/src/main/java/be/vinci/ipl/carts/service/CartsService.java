@@ -52,6 +52,10 @@ public class CartsService {
     }
   }
 
+  public boolean cartItemExisting(int productId, String pseudo) {
+    return repository.existsByProductIdAndPseudo(productId, pseudo);
+  }
+
   public boolean createCartItem(CartItem cartItem) {
     if (repository.existsByProductIdAndPseudo(cartItem.getProductId(), cartItem.getPseudo())) {
       return false;
@@ -59,6 +63,10 @@ public class CartsService {
 
     repository.save(cartItem);
     return true;
+  }
+
+  public void removeCartItem(String pseudo, int productId) {
+    repository.deleteCartItemByProductIdAndPseudo(productId,pseudo);
   }
 
 }
