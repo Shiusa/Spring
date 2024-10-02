@@ -88,4 +88,8 @@ public class CartsService {
     return productList;
   }
 
+  public void removeAllCartItems(String pseudo) {
+    repository.deleteAllByPseudo(pseudo);
+  }
+
 }

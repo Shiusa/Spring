@@ -20,5 +20,9 @@ Content-Type: application/json
 DELETE http://localhost:9003/carts/users/NightHawk/products/1
 Content-Type: application/json
 
+### Delete all cartItem
+DELETE http://localhost:9003/carts/users/NightHawk
+Content-Type: application/json
+
 ### Get user cart product
 GET http://localhost:9003/carts/users/NightHawk

@@ -61,6 +61,10 @@ public class CartsController {
 
   @DeleteMapping("/carts/users/{pseudo}")
   public ResponseEntity<Void> deleteUserCart(@PathVariable String pseudo) {
+    if (!service.userExisting(pseudo)) {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    service.removeAllCartItems(pseudo);
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
