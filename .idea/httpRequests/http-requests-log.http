@@ -1,3 +1,130 @@
+GET http://localhost:9001/products
+
+<> 2024-10-02T173511.200.json
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T172655.200.json
+
+###
+
+PUT http://localhost:9001/produits/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Produit4",
+  "category": "Categorie2",
+  "price": 29.99
+}
+
+<> 2024-10-02T172651.404.json
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T172643.200.json
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T165738.200.json
+
+###
+
+DELETE http://localhost:9001/produits
+Content-Type: application/json
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T165731.200.json
+
+###
+
+DELETE http://localhost:9001/produits/4
+Content-Type: application/json
+
+<> 2024-10-02T165722.400.json
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T165718.200.json
+
+###
+
+DELETE http://localhost:9001/produits/4
+Content-Type: application/json
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T165706.200.json
+
+###
+
+PUT http://localhost:9001/produits/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Produit4",
+  "category": "Categorie2",
+  "price": 29.99
+}
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T165628.200.json
+
+###
+
+POST http://localhost:9001/produits
+Content-Type: application/json
+
+{
+  "name": "Produit4",
+  "category": "Categorie2",
+  "price": 30.0
+}
+
+<> 2024-10-02T165623.409.json
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T165616.200.json
+
+###
+
+POST http://localhost:9001/produits
+Content-Type: application/json
+
+{
+  "name": "Produit4",
+  "category": "Categorie2",
+  "price": 30.0
+}
+
+###
+
+GET http://localhost:9001/produits
+
+<> 2024-10-02T165605.200.json
+
+###
+
 GET http://localhost:9001/produits
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
@@ -298,156 +425,6 @@ Content-Type: application/json
 GET http://localhost:8080/produits
 
 <> 2024-10-01T173124.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit5",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T173116.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit5",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-<> 2024-10-01T173112.500.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172953.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172944.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-<> 2024-10-01T172940.500.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172924.200.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172904.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-<> 2024-10-01T172844.409.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172833.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
-
-<> 2024-10-01T172822.500.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172820.200.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172816.200.json
-
-###
-
-GET http://localhost:8080/produits
-
-<> 2024-10-01T172643.200.json
-
-###
-
-POST http://localhost:8080/produits
-Content-Type: application/json
-
-{
-  "name": "Produit4",
-  "category": "Categorie2",
-  "price": 30.0
-}
 
 ###
 
