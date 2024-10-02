@@ -48,13 +48,13 @@ public class ProductsController {
     return lastId.orElse(0);
   }
 
-  @GetMapping("/produits")
+  @GetMapping("/products")
   public Iterable<Product> readAll() {
     //return products.values();
     return service.findAll();
   }
 
-  @GetMapping("/produits/{productId}")
+  @GetMapping("/products/{productId}")
   public ResponseEntity<Product> readOne(@PathVariable int productId) {
     //return products.get(productId);
     Product productFound = service.findById(String.valueOf(productId));
@@ -66,7 +66,7 @@ public class ProductsController {
     //return service.findById(String.valueOf(productId));
   }
 
-  @PostMapping("/produits")
+  @PostMapping("/products")
   public ResponseEntity<Void> createOne(@RequestBody Product product) {
     /*for (Product prod: products.values()) {
       if (prod.equals(product)) {
@@ -84,7 +84,7 @@ public class ProductsController {
     return new ResponseEntity<>(HttpStatus.CREATED);
   }
 
-  @PutMapping("produits/{productId}")
+  @PutMapping("products/{productId}")
   public ResponseEntity<Void> updateOne(@PathVariable int productId, @RequestBody Product product) {
     if (product.getId() != 0) {
       if (productId != product.getId()) {
@@ -110,14 +110,14 @@ public class ProductsController {
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
-  @DeleteMapping("produits")
+  @DeleteMapping("products")
   public ResponseEntity<Void> deleteAll() {
     //products.clear();
     service.deleteAll();
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
-  @DeleteMapping("produits/{productId}")
+  @DeleteMapping("products/{productId}")
   public ResponseEntity<Void> deleteOne(@PathVariable int productId) {
     if (service.findById(String.valueOf(productId)) == null) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST);

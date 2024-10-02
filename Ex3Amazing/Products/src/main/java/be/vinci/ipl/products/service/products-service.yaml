@@ -8,7 +8,7 @@ servers:
     description: Local server
 
 paths:
-  /produits:
+  /products:
     get:
       summary: Get all products
       responses:
@@ -33,7 +33,7 @@ paths:
         200:
           description: All products deleted
 
-  /produits/{productId}:
+  /products/{productId}:
     parameters:
       - name: productId
         in: path
