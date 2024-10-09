@@ -1,0 +1,98 @@
+openapi: 3.0.3
+info:
+  title: Amazing Product Service
+  description: Products microservice
+  version: 1.0.0
+servers:
+  - url: 'https://localhost:9001'
+    description: Local server
+
+paths:
+  /products:
+    get:
+      summary: Get all products
+      responses:
+        200:
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+    post:
+      summary: Add new product
+      responses:
+        409:
+          description: Add existing product
+        201:
+          description: Product added
+    delete:
+      summary: Delete all products
+      responses:
+        200:
+          description: All products deleted
+
+  /products/{productId}:
+    parameters:
+      - name: productId
+        in: path
+        description: Product id
+        required: true
+        schema:
+          type: integer
+          example: 1
+    get:
+      summary: Get one product based on id
+      responses:
+        200:
+          description: A product
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Product'
+        404:
+          description: Product not found
+    put:
+      summary: Update one product based on id
+      responses:
+        409:
+          description: Updating a product with different id
+        400:
+          description: Update on a product with no id or other missing field
+        404:
+          description: Update on non existing product
+        200:
+          description: Product updated
+    delete:
+      summary: Delete one product based on id
+      responses:
+        404:
+          description: No product found
+        200:
+          description: Product deleted
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Product id
+        name:
+          type: string
+          description: Product name
+        category:
+          type: string
+          description: Products category
+        price:
+          type: number
+          description: Product price
+      example:
+        id: 1
+        name: Produit1
+        category: Categorie1
+        price: 30.0

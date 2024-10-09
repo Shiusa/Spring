@@ -1,5 +1,12 @@
-DELETE http://localhost:9003/carts/products/2
-Content-Type: application/json
+GET http://localhost:9003/carts/users/GhostRider
+
+<> 2024-10-09T174901.200.json
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T174859.200.json
 
 ###
 
@@ -10,96 +17,13 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/GhostRider
 
-<> 2024-10-03T012757.200.json
+<> 2024-10-09T174852.200.json
 
 ###
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T012753.200.json
-
-###
-
-DELETE http://localhost:9003/carts/products/1
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-03T012744.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-03T012742.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-03T012732.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-03T012729.200.json
-
-###
-
-DELETE http://localhost:9003/carts/users/NightHawk
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-03T012715.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-03T012712.200.json
-
-###
-
-DELETE http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-03T012701.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-03T012647.200.json
+<> 2024-10-09T174850.200.json
 
 ###
 
@@ -145,7 +69,7 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011915.200.json
+<> 2024-10-09T174837.200.json
 
 ###
 
@@ -156,7 +80,7 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011907.200.json
+<> 2024-10-09T174827.200.json
 
 ###
 
@@ -170,17 +94,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-03T011859.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
+POST http://localhost:9003/carts/users/NightHawk/products/3
 Content-Type: application/json
 
 {
-  "productId": 1,
+  "productId": 3,
   "pseudo": "NightHawk"
 }
 
@@ -188,7 +106,7 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011851.200.json
+<> 2024-10-09T174814.200.json
 
 ###
 
@@ -199,7 +117,7 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011844.200.json
+<> 2024-10-09T174804.200.json
 
 ###
 
@@ -215,7 +133,105 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011835.200.json
+<> 2024-10-09T174756.200.json
+
+###
+
+POST http://localhost:9003/carts/users/NightHawk/products/1
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "pseudo": "NightHawk"
+}
+
+###
+
+POST http://localhost:9003/carts/users/NightHawk/products/1
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "pseudo": "NightHawk"
+}
+
+<> 2024-10-09T174735.500.json
+
+###
+
+GET http://localhost:9003/carts/users/GhostRider
+
+<> 2024-10-09T173853.200.json
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T173851.200.json
+
+###
+
+DELETE http://localhost:9003/carts/products/1
+Content-Type: application/json
+
+###
+
+GET http://localhost:9003/carts/users/GhostRider
+
+<> 2024-10-09T173846.200.json
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T173844.200.json
+
+###
+
+DELETE http://localhost:9003/carts/products/1
+Content-Type: application/json
+
+###
+
+GET http://localhost:9003/carts/users/GhostRider
+
+<> 2024-10-09T173837.200.json
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T173835.200.json
+
+###
+
+POST http://localhost:9003/carts/users/GhostRider/products/3
+Content-Type: application/json
+
+{
+  "productId": 3,
+  "pseudo": "GhostRider"
+}
+
+###
+
+POST http://localhost:9003/carts/users/GhostRider/products/1
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "pseudo": "GhostRider"
+}
+
+###
+
+POST http://localhost:9003/carts/users/NightHawk/products/3
+Content-Type: application/json
+
+{
+  "productId": 3,
+  "pseudo": "NightHawk"
+}
 
 ###
 
@@ -231,7 +247,18 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011118.200.json
+<> 2024-10-09T173820.200.json
+
+###
+
+DELETE http://localhost:9003/carts/users/NightHawk
+Content-Type: application/json
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T173811.200.json
 
 ###
 
@@ -247,7 +274,7 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011109.200.json
+<> 2024-10-09T173801.200.json
 
 ###
 
@@ -258,73 +285,7 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-<> 2024-10-03T011100.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawks
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-03T010831.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-03T010758.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
+<> 2024-10-09T173746.200.json
 
 ###
 
@@ -340,17 +301,61 @@ Content-Type: application/json
 
 GET http://localhost:9003/carts/users/NightHawk
 
-###
-
-GET http://localhost:9001/products/1
-
-<> 2024-10-03T010539.200.json
+<> 2024-10-09T173733.200.json
 
 ###
 
-GET http://localhost:9001/products
+POST http://localhost:9003/carts/users/NightHawk/products/3
+Content-Type: application/json
 
-<> 2024-10-03T010534.200.json
+{
+  "productId": 3,
+  "pseudo": "NightHawk"
+}
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T173719.200.json
+
+###
+
+POST http://localhost:9003/carts/users/NightHawk/products/1
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "pseudo": "NightHawk"
+}
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T173710.200.json
+
+###
+
+GET http://localhost:9003/carts/users/NightHawk
+
+<> 2024-10-09T173707.200.json
+
+###
+
+DELETE http://localhost:9003/carts/products/2
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:9003/carts/products/1
+Content-Type: application/json
+
+###
+
+GET http://localhost:9003/carts/users/GhostRider
+
+<> 2024-10-03T012757.200.json
 
 ###
 
