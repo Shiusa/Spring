@@ -1,0 +1,44 @@
+### Create one User
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+### Create one User
+GET http://localhost:9002/users/Test
+
+### Update one User
+PUT http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstnameMod",
+  "lastname": "TestLastnameMod",
+  "password": "test"
+}
+
+### Delete one User
+DELETE http://localhost:9002/users/Test
+Content-Type: application/json
+
+###
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}

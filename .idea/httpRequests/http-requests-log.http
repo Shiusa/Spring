@@ -1,3 +1,580 @@
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T154810.404.json
+
+###
+
+DELETE http://localhost:9002/users/Test
+Content-Type: application/json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T154757.200.json
+
+###
+
+GET http://localhost:9002/users/Test
+Content-Type: application/json
+
+<> 2024-10-14T154752.200.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T154709.200.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+<> 2024-10-14T154704.409.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T154658.200.json
+
+###
+
+PUT http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstnameMod",
+  "lastname": "TestLastnameMod",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstnameMod",
+  "lastname": "TestLastnameMod",
+  "password": "test"
+}
+
+<> 2024-10-14T154418.409.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T154411.200.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+<> 2024-10-14T154320.500.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T153852.200.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T153746.200.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+<> 2024-10-14T153243.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+<> 2024-10-14T153232.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+<> 2024-10-14T153101.500.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T153049.404.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+<> 2024-10-14T153042.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "pseudo": "Test",
+  "firstname": "TestFirstname",
+  "lastname": "TestLastname",
+  "password": "test"
+}
+
+<> 2024-10-14T153037.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T151932.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T151034.500.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T151031.404.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T151028.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T151025.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T150851.409.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T145612.500.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T145608.404.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T145604.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T145020.500.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T144744.404.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T144740.409.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T144734.409.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T143715.409.json
+
+###
+
+GET http://localhost:9002/users/Test
+
+<> 2024-10-14T143606.404.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T143559.409.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T143216.500.json
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+###
+
+POST http://localhost:9002/users/Test
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T142631.400.json
+
+###
+
+POST http://localhost:9002/users/NightHawk
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "Test",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T142556.400.json
+
+###
+
+POST http://localhost:9002/users/NightHawk
+Content-Type: application/json
+
+{
+  "user": {
+    "pseudo": "Test",
+    "firstname": "TestFirstname",
+    "lastname": "TestLastname"
+  },
+  "unsafeCredentials": {
+    "pseudo": "NightHawk",
+    "password": "test"
+  }
+}
+
+<> 2024-10-14T142541.400.json
+
+###
+
 GET http://localhost:9003/carts/users/GhostRider
 
 <> 2024-10-09T174901.200.json
@@ -44,318 +621,6 @@ Content-Type: application/json
   "productId": 1,
   "pseudo": "GhostRider"
 }
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T174837.200.json
-
-###
-
-DELETE http://localhost:9003/carts/users/NightHawk
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T174827.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T174814.200.json
-
-###
-
-DELETE http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T174804.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T174756.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-<> 2024-10-09T174735.500.json
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-09T173853.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173851.200.json
-
-###
-
-DELETE http://localhost:9003/carts/products/1
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-09T173846.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173844.200.json
-
-###
-
-DELETE http://localhost:9003/carts/products/1
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-09T173837.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173835.200.json
-
-###
-
-POST http://localhost:9003/carts/users/GhostRider/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "GhostRider"
-}
-
-###
-
-POST http://localhost:9003/carts/users/GhostRider/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "GhostRider"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173820.200.json
-
-###
-
-DELETE http://localhost:9003/carts/users/NightHawk
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173811.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173801.200.json
-
-###
-
-DELETE http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173746.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173733.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173719.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173710.200.json
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-09T173707.200.json
-
-###
-
-DELETE http://localhost:9003/carts/products/2
-Content-Type: application/json
-
-###
-
-DELETE http://localhost:9003/carts/products/1
-Content-Type: application/json
-
-###
-
-GET http://localhost:9003/carts/users/GhostRider
-
-<> 2024-10-03T012757.200.json
 
 ###
 
