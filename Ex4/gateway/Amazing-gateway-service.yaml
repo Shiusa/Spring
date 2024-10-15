@@ -1,0 +1,200 @@
+openapi: 3.0.3
+info:
+  title: Amazing Gateway Service
+  description: Microservice d'interface pour le projet Amazing. Permet de connecter les utilisateurs, et de gérer les utilisateurs, les produits et les paniers.
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080'
+    description: Local Server
+
+paths:
+  /auth:
+    post:
+      summary: Connecter l'utilisateur
+      requestBody:
+        description: Identifiants de l'utilisateur
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/credentials'
+      responses:
+        400:
+          description: Les identifiants ne correspondent pas à ce qui est attendu
+        401:
+          description: Les identifiants sont incorrects
+        200:
+          description: Retourne un token d'authentification prouvant l'identité de l'utilisateur
+          content:
+            'application/json':
+              schema:
+                type: string
+                example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJhdXRoMCIsInBzZXVkbyI6IkNhdDRMaWZlIn0.LqfooEI-I9VTBo-isjm812ttnIPagMCwdhRkW5ngn0_tlLX86LRoxahgskmgIeWDbm4Mu3y3D8Qbhq_71hNQTA
+
+  /users/{pseudo}:
+    parameters:
+      - name: pseudo
+        in: path
+        description: Pseudo de l'utilisateur
+        schema:
+          type: string
+        example: PetWard
+    post:
+      summary: Créer un utilisateur et ses identifiants
+      requestBody:
+        description: Données de l'utilisateur avec ses identifiants
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/userWithCredentials'
+      responses:
+        400:
+          description: Les données de l'utilisateur ne correspondent pas à ce qui est attendu
+        409:
+          description: Un utilisateur existe déjà avec ce pseudo
+        201:
+          description: L'utilisateur a été créé
+    get:
+      summary: Lire un utilisateur
+      responses:
+        404:
+          description: L'utilisateur n'a pas été trouvé
+        200:
+          description: Retourne les données de l'utilisateur
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/user'
+    put:
+      summary: Modifier un utilisateur et ses identifiants
+      security:
+        - jwt:
+            - Connecté en tant que l'utilisateur voulant modifier ses données
+      requestBody:
+        description: Données de l'utilisateur avec ses identifiants
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/userWithCredentials'
+      responses:
+        400:
+          description: Les données de l'utilisateur ne correspondent pas à ce qui est attendu
+        401:
+          description: Le token d'authentification n'a pas pu être vérifié
+        403:
+          description: L'utilisateur n'est pas autorisé à modifier ces données
+        404:
+          description: L'utilisateur n'a pas été trouvé
+        200:
+          description: L'utilisateur a été modifié
+    delete:
+      summary: Supprimer un utilisateur
+      security:
+        - jwt:
+            - Connecté en tant que l'utilisateur voulant supprimer son compte
+      responses:
+        401:
+          description: Le token d'authentification n'a pas pu être vérifié
+        403:
+          description: L'utilisateur n'est pas autorisé à supprimer ce compte
+        404:
+          description: L'utilisateur n'a pas été trouvé
+        200:
+          description: L'utilisateur a été supprimé
+
+  /carts/users/{pseudo}/products/{productId}:
+    parameters:
+      - name: pseudo
+        in: path
+        description: Pseudo de l'utilisateur
+        schema:
+          type: string
+        example: PetWard
+      - name: productId
+        in: path
+        description: Id du produit
+        schema:
+          type: integer
+          example: 1
+    post:
+      summary: Ajouter un produit au panier de l'utilisateur
+      security:
+        - jwt:
+            - Connecté en tant que l'utilisateur voulant ajouter un produit à son panier
+      requestBody:
+        description: Données du produit panier
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/userWithCredentials'
+      responses:
+        404:
+          description: Utilisateur ou produit inexistant
+        409:
+          description: Produit existant dans le panier
+        200:
+          description: Produit ajouté au panier
+
+    delete:
+      summary: Retirer un produit au panier de l'utilisateur
+      security:
+        - jwt:
+            - Connecté en tant que l'utilisateur voulant retirer un produit à son panier
+      responses:
+        404:
+          description: Utilisateur ou produit inexistant
+        200:
+          description: Produit retiré du panier
+
+  /carts/users/{pseudo}:
+    parameters:
+      - name: pseudo
+        in: path
+        description: Pseudo de l'utilisateur
+        schema:
+          type: string
+          example: PetWard
+
+    get:
+      summary: Afficher tout les produit dans le panier de l'utilisateur
+      security:
+        - jwt:
+            - Connecté en tant que l'utilisateur voulant afficher son panier
+      responses:
+        404:
+          description: Utilisateur inexistant
+        200:
+          description: Retourne les produits dans le panier de l'utilisateur
+          content:
+            'application/json':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/cartItem'
+
+    post:
+      summary: Supprimer le panier de l'utilisateur
+      security:
+        - jwt:
+            - Connecté en tant que l'utilisateur voulant supprimer son panier
+      responses:
+        404:
+          description: Utilisateur inexistant
+        200:
+          description: Panier supprimé
+
+  /carts/products/{productId}:
+    parameters:
+      - name: productId
+        in: path
+        description: Id du produit
+        schema:
+          type: integer
+          example: 1
+
+    delete:
+      summary: Supprimer un produit dans tout les paniers
+      responses:
+        404:
+          description: Produit inexistant
+        200:
+          description: Produit supprimé
