@@ -3,9 +3,11 @@ package be.vinci.ipl.gateway.service;
 import be.vinci.ipl.gateway.data.AuthenticationProxy;
 import be.vinci.ipl.gateway.data.UsersProxy;
 import be.vinci.ipl.gateway.dto.CredentialsDTO;
+import be.vinci.ipl.gateway.dto.UserDTO;
 import be.vinci.ipl.gateway.dto.UserWithCredentialsDTO;
 import be.vinci.ipl.gateway.exceptions.BadRequestException;
 import be.vinci.ipl.gateway.exceptions.ConflictException;
+import be.vinci.ipl.gateway.exceptions.NotFoundException;
 import be.vinci.ipl.gateway.exceptions.UnauthorizedException;
 import feign.FeignException;
 import org.springframework.stereotype.Service;
@@ -41,4 +43,14 @@ public class GatewayService {
       else throw e;
     }
   }
+
+  public UserDTO readOneUser(String pseudo) {
+    try {
+      return usersProxy.readOne(pseudo);
+    } catch (FeignException e) {
+      if (e.status() == 404) throw new NotFoundException();
+      else throw e;
+    }
+  }
+
 }

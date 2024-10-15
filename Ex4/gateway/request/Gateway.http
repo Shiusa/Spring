@@ -1,0 +1,22 @@
+### Connect
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+### Create  one user
+POST http://localhost:8080/users/test
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstname",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+### Read one user
+GET http://localhost:8080/users/test
