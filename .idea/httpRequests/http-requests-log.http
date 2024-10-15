@@ -1,3 +1,67 @@
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-15T182408.200.txt
+
+###
+
+GET http://localhost:8080/users/test
+
+<> 2024-10-15T182400.200.json
+
+###
+
+POST http://localhost:8080/users/test
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstname",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-15T182341.401.json
+
+###
+
+POST http://localhost:8080/users/test
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstname",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+###
+
 GET http://localhost:9003/carts/users/NightHawk
 
 <> 2024-10-15T150624.200.json
@@ -528,118 +592,6 @@ Content-Type: application/json
 GET http://localhost:9002/users/Test
 
 <> 2024-10-14T143606.404.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T143559.409.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T143216.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T142631.400.json
-
-###
-
-POST http://localhost:9002/users/NightHawk
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T142556.400.json
-
-###
-
-POST http://localhost:9002/users/NightHawk
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "NightHawk",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T142541.400.json
 
 ###
 
