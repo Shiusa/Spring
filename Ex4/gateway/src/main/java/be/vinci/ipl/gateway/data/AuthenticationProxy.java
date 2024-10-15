@@ -11,4 +11,7 @@ public interface AuthenticationProxy {
 
   @PostMapping("/authentication/connect")
   String connect(CredentialsDTO credentials);
+
+  @PostMapping("/authentication/verify")
+  String verify(String token);
 }

@@ -7,6 +7,10 @@ Content-Type: application/json
   "password": "test"
 }
 
+> {%
+  client.global.set("test", response.body.token);
+%}
+
 ### Create  one user
 POST http://localhost:8080/users/test
 Content-Type: application/json
@@ -20,3 +24,15 @@ Content-Type: application/json
 
 ### Read one user
 GET http://localhost:8080/users/test
+
+### Create  one user
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: {{test}}
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}

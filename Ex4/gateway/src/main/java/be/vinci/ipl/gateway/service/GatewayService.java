@@ -7,6 +7,7 @@ import be.vinci.ipl.gateway.dto.UserDTO;
 import be.vinci.ipl.gateway.dto.UserWithCredentialsDTO;
 import be.vinci.ipl.gateway.exceptions.BadRequestException;
 import be.vinci.ipl.gateway.exceptions.ConflictException;
+import be.vinci.ipl.gateway.exceptions.ForbiddenException;
 import be.vinci.ipl.gateway.exceptions.NotFoundException;
 import be.vinci.ipl.gateway.exceptions.UnauthorizedException;
 import feign.FeignException;
@@ -53,4 +54,23 @@ public class GatewayService {
     }
   }
 
+  public void verify(String token, String expectedPseudo) {
+    try {
+      String userPseudo = authenticationProxy.verify(token);
+      if (!userPseudo.equals(expectedPseudo)) throw new ForbiddenException();
+    } catch (FeignException e) {
+      if (e.status() == 401) throw new UnauthorizedException();
+      else throw e;
+    }
+  }
+
+  public void updateUser(UserWithCredentialsDTO user) {
+    try {
+      usersProxy.updateOne(user.getPseudo(), user);
+    } catch (FeignException e) {
+      if (e.status() == 400) throw new BadRequestException();
+      else if (e.status() == 404) throw new NotFoundException();
+      else throw e;
+    }
+  }
 }

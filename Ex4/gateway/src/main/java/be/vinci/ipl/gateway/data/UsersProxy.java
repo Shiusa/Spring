@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Repository
@@ -19,4 +20,6 @@ public interface UsersProxy {
   @GetMapping("/users/{pseudo}")
   UserDTO readOne(@PathVariable String pseudo);
 
+  @PutMapping("/users/{pseudo}")
+  void updateOne(@PathVariable String pseudo, @RequestBody UserWithCredentialsDTO user);
 }

@@ -1,3 +1,133 @@
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: undefined
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-15T184051.401.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-15T184046.200.txt
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: undefined
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-15T183928.401.json
+
+###
+
+GET http://localhost:8080/users/test
+
+<> 2024-10-15T183924.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-15T183919.200.txt
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-15T183728.400.json
+
+###
+
+GET http://localhost:8080/users/test
+
+<> 2024-10-15T183724.200.json
+
+###
+
+POST http://localhost:8080/users/test
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstname",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-15T183718.409.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-15T183715.200.txt
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-15T183653.200.txt
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-15T183647.200.txt
+
+###
+
 POST http://localhost:8080/auth
 Content-Type: application/json
 
@@ -422,176 +552,6 @@ Content-Type: application/json
 }
 
 <> 2024-10-14T151028.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T151025.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T150851.409.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T145612.500.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T145608.404.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T145604.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T145020.500.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T144744.404.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T144740.409.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T144734.409.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T143715.409.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T143606.404.json
 
 ###
 
