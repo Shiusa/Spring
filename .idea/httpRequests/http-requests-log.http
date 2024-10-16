@@ -1,3 +1,627 @@
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T121411.200.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJhdXRoMCIsInBzZXVkbyI6InRlc3QifQ.6Qs89j_ppv_bjAhJcjWhKyvVs1VWLLkJMjwFFWQfB6sUAa8m1TrgpayFcQ_XXls1C-BRQu-ClV5Fi-dPiiEjbQ
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+###
+
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T121404.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T121400.200.txt
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T121357.200.txt
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: [object Object]
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T121239.401.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: [object Object]
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T121235.401.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T121231.200.txt
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T121227.200.txt
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T121011.200.txt
+
+###
+
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T115623.200.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T115615.401.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T115557.401.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T115553.401.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T115546.200.txt
+
+###
+
+POST http://localhost:8080/users/test
+Content-Type: application/json
+Content-Length: 106
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstname",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T115537.401.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T115534.401.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T115527.401.json
+
+###
+
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T115141.200.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T115138.401.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T115136.401.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T115131.200.txt
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T114451.401.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T114448.401.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T114443.200.txt
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: {test}
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T114103.401.json
+
+###
+
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T114059.200.json
+
+###
+
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T114055.200.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: {test}
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T114044.401.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T114011.401.json
+
+###
+
+PUT http://localhost:8080/users/test
+Content-Type: application/json
+Authorization: null
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstnameUpdated",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+<> 2024-10-16T113931.401.json
+
+###
+
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T113925.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T113921.200.txt
+
+###
+
+POST http://localhost:8080/users/test
+Content-Type: application/json
+Content-Length: 106
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstname",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T113912.401.json
+
+###
+
+GET http://localhost:8080/users/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-10-16T110325.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T110320.200.txt
+
+###
+
+POST http://localhost:8080/users/test
+Content-Type: application/json
+Content-Length: 106
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "firstname": "testFirstname",
+  "lastname": "testLastname",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "pseudo": "test",
+  "password": "test"
+}
+
+<> 2024-10-16T110311.401.json
+
+###
+
 PUT http://localhost:8080/users/test
 Content-Type: application/json
 Authorization: undefined
@@ -113,445 +737,6 @@ Content-Type: application/json
 }
 
 <> 2024-10-15T183653.200.txt
-
-###
-
-POST http://localhost:8080/auth
-Content-Type: application/json
-
-{
-  "pseudo": "test",
-  "password": "test"
-}
-
-<> 2024-10-15T183647.200.txt
-
-###
-
-POST http://localhost:8080/auth
-Content-Type: application/json
-
-{
-  "pseudo": "test",
-  "password": "test"
-}
-
-<> 2024-10-15T182408.200.txt
-
-###
-
-GET http://localhost:8080/users/test
-
-<> 2024-10-15T182400.200.json
-
-###
-
-POST http://localhost:8080/users/test
-Content-Type: application/json
-
-{
-  "pseudo": "test",
-  "firstname": "testFirstname",
-  "lastname": "testLastname",
-  "password": "test"
-}
-
-###
-
-POST http://localhost:8080/auth
-Content-Type: application/json
-
-{
-  "pseudo": "test",
-  "password": "test"
-}
-
-<> 2024-10-15T182341.401.json
-
-###
-
-POST http://localhost:8080/users/test
-Content-Type: application/json
-
-{
-  "pseudo": "test",
-  "firstname": "testFirstname",
-  "lastname": "testLastname",
-  "password": "test"
-}
-
-###
-
-POST http://localhost:8080/auth
-Content-Type: application/json
-
-{
-  "pseudo": "test",
-  "password": "test"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-15T150624.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-###
-
-GET http://localhost:9003/carts/users/NightHawk
-
-<> 2024-10-15T150614.200.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/3
-Content-Type: application/json
-
-{
-  "productId": 3,
-  "pseudo": "NightHawk"
-}
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-<> 2024-10-15T150525.500.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-<> 2024-10-15T150314.500.json
-
-###
-
-POST http://localhost:9003/carts/users/NightHawk/products/1
-Content-Type: application/json
-
-{
-  "productId": 1,
-  "pseudo": "NightHawk"
-}
-
-<> 2024-10-15T150253.500.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T154810.404.json
-
-###
-
-DELETE http://localhost:9002/users/Test
-Content-Type: application/json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T154757.200.json
-
-###
-
-GET http://localhost:9002/users/Test
-Content-Type: application/json
-
-<> 2024-10-14T154752.200.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T154709.200.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-<> 2024-10-14T154704.409.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T154658.200.json
-
-###
-
-PUT http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstnameMod",
-  "lastname": "TestLastnameMod",
-  "password": "test"
-}
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstnameMod",
-  "lastname": "TestLastnameMod",
-  "password": "test"
-}
-
-<> 2024-10-14T154418.409.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T154411.200.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-<> 2024-10-14T154320.500.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T153852.200.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T153746.200.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-<> 2024-10-14T153243.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-<> 2024-10-14T153232.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-<> 2024-10-14T153101.500.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T153049.404.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-<> 2024-10-14T153042.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "pseudo": "Test",
-  "firstname": "TestFirstname",
-  "lastname": "TestLastname",
-  "password": "test"
-}
-
-<> 2024-10-14T153037.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T151932.500.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T151034.500.json
-
-###
-
-GET http://localhost:9002/users/Test
-
-<> 2024-10-14T151031.404.json
-
-###
-
-POST http://localhost:9002/users/Test
-Content-Type: application/json
-
-{
-  "user": {
-    "pseudo": "Test",
-    "firstname": "TestFirstname",
-    "lastname": "TestLastname"
-  },
-  "unsafeCredentials": {
-    "pseudo": "Test",
-    "password": "test"
-  }
-}
-
-<> 2024-10-14T151028.500.json
 
 ###
 

@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 > {%
-  client.global.set("test", response.body.token);
+  client.global.set("testToken", response.body);
 %}
 
 ### Create  one user
@@ -25,10 +25,10 @@ Content-Type: application/json
 ### Read one user
 GET http://localhost:8080/users/test
 
-### Create  one user
+### Update  one user
 PUT http://localhost:8080/users/test
 Content-Type: application/json
-Authorization: {{test}}
+Authorization: {{testToken}}
 
 {
   "pseudo": "test",
